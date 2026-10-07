@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ANTO FIT - Fitness & Gym Center</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #111;
+            color: white;
+        }
+
+        /* HEADER */
+        header {
+            background: #000;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff3b30;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #ff3b30;
+        }
+
+        /* HOME */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.7),
+                    rgba(0,0,0,0.7)
+                ),
+                url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48")
+                center/cover;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero span {
+            color: #ff3b30;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background: #ff3b30;
+            color: white;
+            padding: 14px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #e52b20;
+        }
+
+        /* COMMON SECTION */
+        section {
+            padding: 70px 8%;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 35px;
+            margin-bottom: 35px;
+        }
+
+        /* ABOUT */
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        /* SERVICES */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #1d1d1d;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            color: #ff3b30;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* PLANS */
+        .plans {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .plan {
+            background: #1d1d1d;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .plan h3 {
+            color: #ff3b30;
+            font-size: 25px;
+        }
+
+        .price {
+            font-size: 30px;
+            margin: 20px 0;
+        }
+
+        .plan p {
+            margin: 12px;
+            color: #ccc;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #1a1a1a;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        textarea {
+            height: 120px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: #ff3b30;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 17px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #e52b20;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #000;
+            text-align: center;
+            padding: 25px;
+            color: #aaa;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 8px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .services,
+            .plans {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            ANTO FIT
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#plans">Plans</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+
+        <div>
+
+            <h1>
+                BUILD YOUR <span>BODY</span>
+            </h1>
+
+            <p>
+                Train Hard. Stay Strong. Become Better.
+            </p>
+
+            <a href="#plans" class="btn">
+                JOIN NOW
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+
+        <h2>About Our Gym</h2>
+
+        <p>
+            Welcome to ANTO FIT, your fitness and gym center.
+            We provide a comfortable environment, professional
+            training and modern equipment to help you achieve
+            your fitness goals.
+        </p>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section id="services">
+
+        <h2>Our Services</h2>
+
+        <div class="services">
+
+            <div class="card">
+
+                <h3>Weight Training</h3>
+
+                <p>
+                    Build strength and muscle with effective
+                    weight training programs.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Cardio Training</h3>
+
+                <p>
+                    Improve your stamina and fitness with
+                    cardio workouts.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Personal Training</h3>
+
+                <p>
+                    Get personalized guidance from experienced
+                    fitness trainers.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MEMBERSHIP PLANS -->
+    <section id="plans">
+
+        <h2>Membership Plans</h2>
+
+        <div class="plans">
+
+            <div class="plan">
+
+                <h3>Basic</h3>
+
+                <div class="price">
+                    ₹999
+                </div>
+
+                <p>1 Month Membership</p>
+                <p>Gym Access</p>
+                <p>Basic Equipment</p>
+
+            </div>
+
+
+            <div class="plan">
+
+                <h3>Premium</h3>
+
+                <div class="price">
+                    ₹2499
+                </div>
+
+                <p>3 Months Membership</p>
+                <p>Full Gym Access</p>
+                <p>Workout Guidance</p>
+
+            </div>
+
+
+            <div class="plan">
+
+                <h3>Ultimate</h3>
+
+                <div class="price">
+                    ₹4999
+                </div>
+
+                <p>6 Months Membership</p>
+                <p>Full Gym Access</p>
+                <p>Personal Training</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <form onsubmit="submitForm(event)">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Enter Your Email"
+                required
+            >
+
+            <input
+                type="tel"
+                placeholder="Enter Your Phone Number"
+                required
+            >
+
+            <textarea
+                placeholder="Your Message">
+            </textarea>
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 ANTO FIT - Fitness & Gym Center
+        </p>
+
+        <p>
+            Train Hard • Stay Strong • Never Give Up
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function submitForm(event) {
+
+            event.preventDefault();
+
+            let name =
+                document.getElementById("name").value;
+
+            alert(
+                "Thank you " + name +
+                "! We will contact you soon."
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>
